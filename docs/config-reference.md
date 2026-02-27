@@ -554,8 +554,8 @@ Notes:
 | Key | Default | Purpose |
 |---|---|---|
 | `enabled` | `false` | Enable `web_search_tool` |
-| `provider` | `duckduckgo` | Search backend: `duckduckgo`, `brave`, `firecrawl` |
-| `api_key` | unset | Generic provider key (used by `firecrawl`, fallback for `brave`) |
+| `provider` | `duckduckgo` | Search backend: `duckduckgo`, `brave`, `exa`, `tavily`, `firecrawl` |
+| `api_key` | unset | Generic provider key (required for `exa`, `tavily`, `firecrawl`; fallback for `brave`) |
 | `api_url` | unset | Optional API URL override |
 | `brave_api_key` | unset | Dedicated Brave key (required for `provider = "brave"` unless `api_key` is set) |
 | `max_results` | `5` | Maximum search results returned (clamped to 1-10) |
@@ -564,7 +564,7 @@ Notes:
 
 Notes:
 
-- If DuckDuckGo returns `403`/`429` in your network, switch provider to `brave` or `firecrawl`.
+- If DuckDuckGo returns `403`/`429` in your network, switch provider to `brave`, `exa`, `tavily`, or `firecrawl`.
 - `web_search` finds candidate URLs; pair it with `web_fetch` for page content extraction.
 
 ## `[gateway]`

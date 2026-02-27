@@ -236,7 +236,7 @@ Why this happens:
 
 Fix options:
 
-1. Switch provider to Brave (recommended when you have an API key):
+1. Switch provider to Brave (recommended when you already use `brave_api_key`):
 
 ```toml
 [web_search]
@@ -245,7 +245,29 @@ provider = "brave"
 brave_api_key = "<SECRET>"
 ```
 
-2. Switch provider to Firecrawl (if enabled in your build):
+1. Switch provider to Exa:
+
+```toml
+[web_search]
+enabled = true
+provider = "exa"
+api_key = "<SECRET>"
+# optional
+# api_url = "https://api.exa.ai/search"
+```
+
+1. Switch provider to Tavily:
+
+```toml
+[web_search]
+enabled = true
+provider = "tavily"
+api_key = "<SECRET>"
+# optional
+# api_url = "https://api.tavily.com/search"
+```
+
+1. Switch provider to Firecrawl (if enabled in your build):
 
 ```toml
 [web_search]
@@ -254,7 +276,7 @@ provider = "firecrawl"
 api_key = "<SECRET>"
 ```
 
-3. Keep DuckDuckGo for search, but use `web_fetch` to read pages once you have URLs.
+1. Keep DuckDuckGo for search, but use `web_fetch` to read pages once you have URLs.
 
 ### `web_fetch`/`http_request` says host is not allowed
 
